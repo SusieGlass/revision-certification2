@@ -1,0 +1,15 @@
+<h1>Liste des voitures</h1>
+
+<div class='container'>
+  <% @cars.each do |car| %>
+    <%= link_to car_path(car) do%>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= car.name %></h2>
+            <p><strong><%= car.description %></strong></p>
+          </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

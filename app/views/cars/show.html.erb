@@ -1,0 +1,4 @@
+<h1>Show de la voiture</h1>
+
+<h2><strong><%= @car.name %></strong></h2>
+<%= link_to "Supprimer cette voiture", car_path(), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

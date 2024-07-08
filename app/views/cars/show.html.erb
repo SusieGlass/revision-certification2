@@ -2,3 +2,7 @@
 
 <h2><strong><%= @car.name %></strong></h2>
 <%= link_to "Supprimer cette voiture", car_path(), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+<% @car.bookings.each do |booking| %>
+<%= link_to "Supprimer la réservation avec la date du : #{booking.start_date.strftime("%d-%m-%Y")}", booking_path(booking), data: {turbo_method: "delete", turbo_confirm: "Es-tu sûr (e)?"} %>
+<% end %>

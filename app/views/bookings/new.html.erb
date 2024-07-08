@@ -1,0 +1,12 @@
+<h1>Création de Bookings</h1>
+
+<div class = 'container'>
+  <div class = 'row'>
+    <div class = 'col'>
+      <%= simple_form_for [@car, @booking] do |f| %>
+        <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } }  %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
